@@ -8,12 +8,12 @@ const Home = () => {
     const onClickDispatchGetProfile = () => {
         console.log("test");
 
-        // the hook useDispatch dispatches an action
+        // the hook useDispatch dispatches an action to the redux store
         dispatch(getProfileAction())
 
     }
 
-    // the hook useSelector fetches the state
+    // the hook useSelector fetches the state from the central store
     const user = useSelector((state) => state.user?.profile?.users?.[0])
 
     return (
